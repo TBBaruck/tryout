@@ -1,7 +1,11 @@
+// import * as React from 'react'; this means importing everyting from react
 import Link from "next/link";
 import Head from "next/head";
+import Image  from "next/image";
 import { Merriweather } from "next/font/google";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { Card, CardActions, CardContent,CardMedia, Button, Typography } from "@mui/material";
+// import firstHair from  "../public/bg_desktop.jpg";
 
 
 
@@ -51,6 +55,44 @@ export default function Index() {
           </div>
         </div>
 
+        <section className="min-h-[420px] grid grid-cols-3 bg-black">
+          <article className="flex justify-center items-center bg-yellow-400">
+              <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                  sx={{ height: 140 }}
+                  image="/bg_desktop"
+                  title="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Lizard
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Lizards are a widespread group of squamate reptiles, with over 6,000
+                    species, ranging across all continents except Antarctica
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Share</Button>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>
+        
+          </article>
+          <aside className="col-span-2 p-16 bg-green-400">
+           <div className="grid grid-cols-2 gap-2">
+           <Image width={300} height={680} src='/hair_hori.jpg'/>
+            
+            <div className="grid grid-cols-2 grid-rows-2 gap-2">
+            <Image width={200} height={200} src='/hair_4.jpg'/>
+            <Image width={200} height={200} src='/hair_3.jpg'/>
+            <Image width={200} height={200} src='/hair_3.jpg'/>
+            <Image width={200} height={200} src='/hair_4.jpg'/>
+            </div>
+           </div>
+          </aside>
+
+        </section>
         {/* shop intro section */}
       </main>
     </>
