@@ -123,7 +123,7 @@ export function NavBar() {
                 </div>
                 <blockquote className="flex flex-row items-center">
                     <BsCurrencyDollar className="text-amber-400"/>
-                    <span className="text-white" >USB</span>
+                    <span className="text-white">USB</span>
                     <MdKeyboardArrowDown />
                 </blockquote>
             </div>
