@@ -1,4 +1,4 @@
-export default funtion Index() {
+export default function Index() {
   return (
        
     <> 
