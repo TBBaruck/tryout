@@ -42,7 +42,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="h-full w-full lg:hidden justify-center items-center bg-mobile ">
+        <div className="h-full w-full lg:hidden justify-center items-center bg-mobile">
           <div className="w-full h-full bg-[#402B3A]/30 flex  justify-center items-center">
             <div className="w-full md:w-[520px] items-center flex flex-col  gap-6 px-4 md:px-0 ">
             <h1 className={`${MerriBles900.className} text-4xl lg:text-6xl text-center text-[#F8F4EC]`}>Shop for hairs and book an appoint for a fix</h1>
