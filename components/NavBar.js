@@ -37,7 +37,8 @@ export function NavBar() {
     
 
     return(
-        <nav className="h-[60px] grid grid-cols-2 lg:grid-cols-3 gap-8 bg-[#402B3A] border-amber-600 px-2 md:px-8 lg:px-16">
+        <>
+        <nav className="h-[60px] grid grid-cols-2 lg:grid-cols-3 gap-20 bg-[#402B3A] border-amber-600 px-2 md:px-8 lg:px-16">
             {/* Show on all devices */}
            <ul className="hidden lg:flex flex-row gap-2 items-center">
                 <li className={styles.navLink}><Link href="#">Shop</Link></li>
@@ -92,10 +93,46 @@ export function NavBar() {
                     <li className="li-elements  bg-[#402B3A] text-white font-bold"> <Link href="#">Show-Room</Link></li>
                     <li className="li-elements  bg-[#402B3A] text-white font-bold"> <Link href="#">Contact-us</Link></li>
                 </ul> */}
-           
         </nav>
+
+        {/* MOBILE ONLY NAVBAR */}
+
+        <div className={`${showMenu ? "flex" : "hidden"} flex flex-col justify-center items-center gap-8 lg:hidden min-h-80 bg-gray-800 w-full absolute top-[60px] left-0 z-10`}>
+                <ul className="flex flex-col gap-3">
+                    <li className="text-gray-200 text-2xl text-center"><Link href="#">Shop</Link></li>
+                    <li className="text-gray-200 text-2xl text-center"><Link href="#">Accessories</Link></li>
+                    <li className="text-gray-200 text-2xl text-center"><Link href="#">Showroom</Link></li>
+                    <li className="text-gray-200 text-2xl text-center"><Link href="/contact-us">Contact-Us</Link></li>
+                </ul>
+
+
+                <ul className="flex flex-row gap-3">
+                    <li> <Link href="#"><CiSearch className={styles.navLinkIcon}/></Link></li>
+                    <li> <Link href="#"><CiUser className={styles.navLinkIcon}/></Link></li>
+                    <li> <Link href="#"><CiHeart className={styles.navLinkIcon}/></Link></li>
+                    <li> <Link href="#"><CiShoppingCart className={styles.navLinkIcon}/></Link></li>
+                </ul>
+
+             <div className="flex flex-row gap-3">
+                <div className="">
+                    <blockquote className="flex flex-row items-center">
+                        <FaGlobeAmericas className="text-amber-200"/>
+                        <span className="text-white">English</span>
+                        <MdKeyboardArrowDown />
+                    </blockquote>
+                </div>
+                <blockquote className="flex flex-row items-center">
+                    <BsCurrencyDollar className="text-amber-400"/>
+                    <span className="text-white" >USB</span>
+                    <MdKeyboardArrowDown />
+                </blockquote>
+            </div>
+        </div>
+        </>
     )
 }
+
+
 const styles = {
     navLink: "text-gray-200",
     navLinkIcon: "text-gray-200 text-2xl"
