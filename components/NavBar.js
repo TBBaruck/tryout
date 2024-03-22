@@ -56,11 +56,8 @@ export function NavBar() {
 
         {/* show only on mobile and tablets */}
             <div className="flex justify-end items-center lg:hidden">
-                <div>
-                <HiMenuAlt3 onClick={handleHiMenu} className={`${showMenu ? "hidden" : "flex"} text-gray-200 text-4xl `}/>
-                </div>
-                
-                <IoMdClose onClick={handleMdClose} className={`${showClose ? "flex" : "hidden"} text-gray-200 text-4xl `}/>
+                <HiMenuAlt3 onClick={() => handleHiMenu()} className={`${showMenu ? "hidden" : "flex"} text-gray-200 text-4xl `}/>
+                <IoMdClose onClick={() => handleMdClose()} className={`${showClose ? "flex" : "hidden"} text-gray-200 text-4xl`}/>
             </div>
 
             {/* show only on desktop */}
